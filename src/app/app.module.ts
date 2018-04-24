@@ -7,6 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
 
+
 @NgModule({
   declarations: [
     AppComponent,

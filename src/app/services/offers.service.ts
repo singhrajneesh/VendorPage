@@ -13,14 +13,14 @@ constructor(private http: Http) { }
 private headers = new Headers({ 'Content-Type': 'application/json'});
 
 getOffers(){
-  return this.http.get(Offerslist.getOfferlistUrl)
+  return this.http.get(Offerslist.getOfferlistUrl+"/offers")
   .map(data => data.json(),
   (error: any)=>console.log("error in getting data from database"));
 }
 
 getAddress(street,city,state,zip){
   console.log(city);
-  return this.http.get(Offerslist.getAddressUrl+city+"&key="+"AIzaSyBeSuJbAPirjvZ0mEDxd-g05P5_f6gkAlQ")
+  return this.http.get(Offerslist.getAddressUrl+street+city+state+zip+"&key="+"AIzaSyBeSuJbAPirjvZ0mEDxd-g05P5_f6gkAlQ")
   .map(data => data.json(),
   (error: any)=>console.log("error in getting data from database"));
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {OffersService} from './services/offers.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
